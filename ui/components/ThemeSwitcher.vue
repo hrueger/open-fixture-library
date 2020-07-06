@@ -35,8 +35,8 @@ export default {
           path: `/`,
           maxAge: 60 * 60 * 24 * 7,
           sameSite: true,
-          httpOnly: process.env === `production`,
-          secure: process.env === `production`,
+          httpOnly: process.env.NODE_ENV === `production`,
+          secure: process.env.NODE_ENV === `production`,
         });
       },
       immediate: true,
